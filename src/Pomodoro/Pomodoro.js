@@ -6,10 +6,7 @@ export class Pomodoro extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: 0,
-      breakTime: null,
-      start: Date.now(),
-      isOn: true
+      time: 0
     };
     this.startTime = this.startTime.bind(this);
     this.stopTime = this.stopTime.bind(this);
@@ -19,37 +16,40 @@ export class Pomodoro extends Component {
   startTime() {
     this.deadline = Date.now() + 1500000;
     this.timer = setInterval(() => {
+      if (this.state.time < 0)
+        this.timer = clearInterval(this.timer, this.stopTime.bind(this), 0);
       this.setState({ time: this.deadline - Date.now() });
-      /* let x = 0;
-            if(++x === 2510)
-                window.clearInterval(this.timer); */
     }, 1);
   }
 
   stopTime() {
+    //change name of function
     clearInterval(this.timer);
+    this.setState({ time: 0 });
   }
 
   startBreak() {
     this.break_time = Date.now() + 300000;
-    this.timer = setInterval(() =>
-      this.setState({ time: this.break_time - Date.now() })
-    );
+    this.timer = setInterval(() => {
+      if (this.state.time < 0)
+        this.timer = clearInterval(this.timer, this.stopTime.bind(this), 0);
+      this.setState({ time: this.break_time - Date.now() });
+    }, 1);
   }
 
   render() {
     return (
-      <div class="Big" style={{ textAlign: "center" }}>
+      <div className="Big" style={{ textAlign: "center" }}>
         <div id="time-c">
           <h1 id="time">{format(this.state.time)}</h1>
         </div>
         <button id="ham-button" className="Button" onClick={this.startTime}>
-          go HAM
+          GO H.A.M.
         </button>
         <br />
         <br />
         <button id="pause-button" className="Button" onClick={this.stopTime}>
-          pause
+          reset
         </button>
         <br />
         <br />
@@ -58,7 +58,10 @@ export class Pomodoro extends Component {
         </button>
         <br />
         <br />
-        <p id="footer">© 2019. Created and coded with ❤ by Alexis Carr</p>
+        <br />
+        <footer id="footer">
+          © 2019. Created and coded with ❤ by Alexis Carr
+        </footer>
       </div>
     );
   }

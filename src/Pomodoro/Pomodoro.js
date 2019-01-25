@@ -39,7 +39,7 @@ export class Pomodoro extends Component {
 
   render() {
     return (
-      <body style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center" }}>
         <div id="time-c">
           <h1 id="time">{format(this.state.time)}</h1>
         </div>
@@ -59,7 +59,7 @@ export class Pomodoro extends Component {
         <br />
         <br />
         <p id="footer">© 2019. Created and coded with ❤ by Alexis Carr</p>
-      </body>
+      </div>
     );
   }
 }

@@ -1,0 +1,24 @@
+html {
+  background: url("https://uploads.codesandbox.io/uploads/user/75ef61c0-c228-4938-9090-b3eab8ad6f1b/Q8Mp-black-and-white-black-and-white-hand-1496146.jpg");
+  background-size: cover;
+}
+
+#footer {
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#time {
+  color: aliceblue;
+  font-size: 200px;
+  text-shadow: 3px 2px black;
+}
+
+.Button {
+  background-color: aliceblue;
+  font-size: 24px;
+  padding: 14px 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(4px);
+}

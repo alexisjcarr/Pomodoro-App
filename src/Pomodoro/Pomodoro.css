@@ -4,11 +4,13 @@ html {
 }
 
 #footer {
+  background: black;
   color: white;
   font-family: "Lucida Console", Monaco, monospace;
 }
 
 #time {
+  /*background: black;*/
   color: aliceblue;
   font-size: 100px;
   text-shadow: 3px 2px black;
@@ -16,6 +18,7 @@ html {
 
 .Button {
   background-color: aliceblue;
+  font-family: "Lucida Console", Monaco, monospace;
   font-size: 24px;
   padding: 14px 40px;
   border-radius: 8px;

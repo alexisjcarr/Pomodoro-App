@@ -39,7 +39,7 @@ export class Pomodoro extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div class="Big" style={{ textAlign: "center" }}>
         <div id="time-c">
           <h1 id="time">{format(this.state.time)}</h1>
         </div>

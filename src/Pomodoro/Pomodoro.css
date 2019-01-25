@@ -1,10 +1,10 @@
 html {
-  background: url("https://uploads.codesandbox.io/uploads/user/75ef61c0-c228-4938-9090-b3eab8ad6f1b/Q8Mp-black-and-white-black-and-white-hand-1496146.jpg");
+  background: url("https://rawcdn.githack.com/alexisjcarr/Pomodoro-App/ba1a9118fc7ea7515edea0d0ec6ffe3b3d748b51/src/Pomodoro/black-and-white-black-and-white-hand-1496146.jpg");
   background-size: cover;
 }
 
 #footer {
-  background: black;
+  /*background: lightgray;*/
   color: white;
   font-family: "Lucida Console", Monaco, monospace;
 }

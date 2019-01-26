@@ -1,3 +1,21 @@
+/*.loader {
+  border: 16px solid #f3f3f3;  /* Light grey 
+  border-top: 16px solid #3498db; /* Blue 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}*/
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +24,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*background: url("https://rawcdn.githack.com/alexisjcarr/Pomodoro-App/ba1a9118fc7ea7515edea0d0ec6ffe3b3d748b51/src/Pomodoro/black-and-white-black-and-white-hand-1496146.jpg");*/
+  background: url("https://uploads.codesandbox.io/uploads/user/75ef61c0-c228-4938-9090-b3eab8ad6f1b/qoLj-background-concrete-dirty-984540.jpg");
+  background-size: cover;
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
 code {

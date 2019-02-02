@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import format from "format-duration";
 import "./Pomodoro.css";
+import { Motivation } from "../Motivation/Motivation.js";
 
 export class Pomodoro extends Component {
   constructor(props) {
@@ -12,14 +13,6 @@ export class Pomodoro extends Component {
     this.stopTime = this.stopTime.bind(this);
     this.startBreak = this.startBreak.bind(this);
   }
-
-  //componentWillMount() {
-  //return (
-  //<div>
-  //<img src="https://uploads.codesandbox.io/uploads/user/75ef61c0-c228-4938-9090-b3eab8ad6f1b/0Vg--Loading_icon.gif" />
-  //</div>
-  //);
-  //}
 
   startTime() {
     this.deadline = Date.now() + 1500000;
@@ -68,6 +61,9 @@ export class Pomodoro extends Component {
         <button id="break button" className="Button" onClick={this.startBreak}>
           start break
         </button>
+        <br />
+        <br />
+        <Motivation />
         <footer id="footer">
           © 2019. Created and coded with ❤ by Alexis Carr
         </footer>

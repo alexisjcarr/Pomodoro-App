@@ -25,6 +25,19 @@
     <title>Pomodoro Timer</title>
   </head>
   <body>
+    <script>
+      $(document).ready(function() {
+        //Preloader
+        $(window).on("load", function() {
+          preloaderFadeOutTime = 500;
+          function hidePreloader() {
+            var preloader = $(".spinner-wrapper");
+            preloader.fadeOut(preloaderFadeOutTime);
+          }
+          hidePreloader();
+        });
+      });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -38,4 +51,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <!-- CSS Spinner -->
+  <div class="spinner-wrapper"><div class="spinner"></div></div>
 </html>

@@ -1,0 +1,14 @@
+.Button1 {
+  background-color: aliceblue;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  padding: 14px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(4px);
+}
+
+.Button1:hover {
+  background-color: lightslategray;
+  color: aliceblue;
+}
